@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TikTok Video Downloader, no Watermark, no ads, fast, free, by Frenz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            width: 80%;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #666;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            background: url('arrow.png') no-repeat right center;
+            background-size: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .not-working {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>TikTok Video Downloader, no Watermark, no ads, fast, free, by Frenz</h1>
+        {% if message %}
+        <p>{{ message }}</p>
+        {% endif %}
+        <form method="POST">
+            <label for="input_id_normal">Video ID:</label>
+            <input type="text" name="input_id_normal"><br>
+            
+            <label class="not-working" for="input_url">Video URL (WIP)</label>
+            <input type="text" name="input_url" readonly><br>
+            
+            <label for="option">Quality Option:</label>
+            <select name="option">
+                <option value="1">frenzapi</option>
+               
+            </select><br>
+            
+            <input type="submit" value="Download">
+        </form>
+    </div>
+</body>
+</html>
